@@ -1,0 +1,20 @@
+---
+import Layout from '@layouts/Layout.astro';
+import CommunityHero from '@components/community/CommunityHero.astro';
+import CommunityProblem from '@components/community/CommunityProblem.astro';
+import CommunityStance from '@components/community/CommunityStance.astro';
+import CommunityForWho from '@components/community/CommunityForWho.astro';
+import CommunitySignUp from '@components/community/CommunitySignUp.tsx';
+import Footer from '@components/landing/Footer.astro';
+---
+
+<Layout title="codigo-acessivel">
+	<main class="dark min-h-screen bg-background text-foreground">
+		<CommunityHero />
+		<CommunityProblem />
+		<CommunityStance />
+		<CommunityForWho />
+		<CommunitySignUp client:load />
+		<Footer />
+	</main>
+</Layout>
