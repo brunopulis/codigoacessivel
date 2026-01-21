@@ -95,6 +95,6 @@ Não fazemos:
 ```
 ---
 
-## 📝 Licença
+## Licença
 
-MIT
+[CC BY-SA 4.0](LICENSE)
