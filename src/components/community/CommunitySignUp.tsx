@@ -86,7 +86,7 @@ const CommunitySignup = () => {
                   placeholder="preencha seu nome"
                   minLength={3} 
                   required
-                  value={name}
+                  value={name || ""}
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>
@@ -98,7 +98,7 @@ const CommunitySignup = () => {
                   id="email-pilot" 
                   placeholder="seu@email.com" 
                   maxLength={255} 
-                  value={email}
+                  value={email || ""}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
