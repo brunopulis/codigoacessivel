@@ -1,38 +1,44 @@
 ---
 import { X } from "@lucide/astro";
 
-const problems = [
-  "passam em auditorias automatizadas",
-  "seguem guidelines no papel",
-  "e ainda assim excluem pessoas reais",
+const scenarios = [
+  "O Lighthouse dá nota boa, mas a navegação é confusa",
+  "O código segue a WCAG, mas ninguém testou com teclado",
+  "Acessibilidade vira uma tarefa no final do sprint",
+  "Ferramentas dizem que está tudo certo, mas os usuários dizem o contrário",
 ];
 ---
 
-<section class="px-6 py-20 lg:py-32 bg-card">
+<section class="px-6 py-6 lg:py-12 bg-card" aria-labelledby="community-problem">
   <div class="max-w-4xl mx-auto">
-  <h2 class="text-2xl md:text-4xl font-bold text-center mb-6">
-    A web está cheia de projetos que:
-      </h2>
-      
-      <div class="space-y-4 mb-12 max-w-xl mx-auto">
-        {problems.map((problem, index) => (
-          <div 
-            class="flex items-center gap-4 p-4 rounded-lg bg-secondary/30 border border-border"
-          >
-            <X class="w-5 h-5 text-destructive shrink-0" aria-hidden="true" />
-            <p class="text-lg text-foreground">{problem}</p>
-          </div>
-        ))}
-      </div>
-      
-      <div class="text-center">
-        <p class="text-2xl md:text-3xl font-bold text-foreground mb-4">
-          Isso não é acessibilidade.
-        </p>
-        <p class="text-2xl md:text-3xl font-bold text-primary">
-          Isso é <span class="underline decoration-primary/50">conformidade vazia</span>.
-        </p>
-      </div>
-    </div>
-</section>
+    <h2
+      id="community-problem"
+      class="text-2xl md:text-4xl font-bold text-center mb-3"
+    >
+      O problema
+    </h2>
+    <p class="text-lg text-muted-foreground text-center mb-6 max-w-2xl mx-auto">
+      Se você trabalha com front-end, QA ou web em geral, provavelmente já viveu
+      pelo menos um desses cenários:
+    </p>
 
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      {
+        scenarios.map((scenario) => (
+          <li class="flex items-center gap-4 p-5 rounded-lg bg-card border border-border">
+            <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+              <X class="w-6 h-6 text-white shrink-0 mt-0.5" />
+            </div>
+            <p class="text-white">{scenario}</p>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="text-lg text-center text-muted-foreground">
+      Isso acontece porque acessibilidade foi reduzida a checklist, quando na
+      prática ela depende de <strong class="text-foreground"
+        >decisões técnicas bem feitas desde o início</strong
+      >.
+    </p>
+  </div>
+</section>

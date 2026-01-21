@@ -1,30 +1,52 @@
 ---
-const rejectedExcuses = [
-  '"vamos arrumar só para o cliente assinar"',
-  '"ninguém usa leitor de tela mesmo"',
-  '"depois a gente vê isso"',
+import { Eye, Code, MousePointer, MessageSquare } from "@lucide/astro";
+
+const practices = [
+  "Escreve código",
+  "Analisa interfaces",
+  "Testa interações",
+  "Defende decisões técnicas no dia a dia",
 ];
+
+const icons = [Code, Eye, MousePointer, MessageSquare];
 ---
 
-<section class="px-6 py-20 lg:py-32 bg-card">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-2xl md:text-4xl font-bold mb-8">
-      Já perdi oportunidades por não aceitar:
+<section class="px-6 py-20 lg:py-32">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-2xl md:text-4xl font-bold text-center mb-6">
+      O que é o Código Acessível
     </h2>
-        
-    <div class="space-y-4 mb-12 max-w-2xl mx-auto">
-      {rejectedExcuses.map((excuse) => (
-        <p 
-          class="text-lg md:text-xl text-muted-foreground italic p-4 bg-secondary/20 rounded-lg border border-border"
-        >
-          {excuse}
-        </p>
-      ))}
-    </div>
-        
-    <p class="text-2xl md:text-3xl font-bold text-primary">
-      E perder essas oportunidades valeu a pena.
+
+    <p class="text-lg text-muted-foreground text-center mb-4 max-w-3xl mx-auto">
+      A comunidade Código Acessível é voltada para desenvolvedores, <em
+        >QA<sup>'</sup>s</em
+      >, designers e profissionais de tecnologia que precisam aplicar
+      acessibilidade digital em projetos reais, indo além de testes
+      automatizados e conformidade superficial com a <abbr
+        title="Web Content Accessibility Guidelines">WCAG</abbr
+      >.
+    </p>
+
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      {
+        practices.map((practice, index) => {
+          const Icon = icons[index];
+          return (
+            <li class="flex items-center gap-4 p-5 rounded-lg bg-card border border-border">
+              <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                <Icon class="w-6 h-6 text-primary" />
+              </div>
+              <p class="text-foreground font-medium">{practice}</p>
+            </li>
+          );
+        })
+      }
+    </ul>
+    <p class="text-lg text-center text-muted-foreground">
+      Aqui você aprende o <strong class="text-foreground"
+        >mínimo necessário</strong
+      >, do jeito certo, para parar de cometer erros básicos que excluem
+      usuários — mesmo em projetos "bem avaliados".
     </p>
   </div>
 </section>
-  

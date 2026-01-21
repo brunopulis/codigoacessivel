@@ -1,0 +1,44 @@
+---
+import { X } from "@lucide/astro";
+---
+
+<section class="px-6 py-10 lg:py-20" aria-labelledby="not-found">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 id="not-found" class="text-2xl md:text-4xl font-bold mb-12">
+      O que você <span class="text-primary">não</span> vai encontrar aqui.
+    </h2>
+
+    <ul class="flex flex-wrap justify-center gap-4 mb-12">
+      <li
+        class="flex items-center gap-2 px-4 py-2 rounded-full bg-destructive/10 border border-destructive/30"
+      >
+        <X class="w-4 h-4 text-destructive" aria-hidden="true" />
+        <span class="text-muted-foreground">Promessas irreais</span>
+      </li>
+      <li
+        class="flex items-center gap-2 px-4 py-2 rounded-full bg-destructive/10 border border-destructive/30"
+      >
+        <X class="w-4 h-4 text-destructive" aria-hidden="true" />
+        <span class="text-muted-foreground">Conteúdo inflado</span>
+      </li>
+      <li
+        class="flex items-center gap-2 px-4 py-2 rounded-full bg-destructive/10 border border-destructive/30"
+      >
+        <X class="w-4 h-4 text-destructive" aria-hidden="true" />
+        <span class="text-muted-foreground">Framework mágico</span>
+      </li>
+      <li
+        class="flex items-center gap-2 px-4 py-2 rounded-full bg-destructive/10 border border-destructive/30"
+      >
+        <X class="w-4 h-4 text-destructive" aria-hidden="true" />
+        <span class="text-muted-foreground"
+          >Acessibilidade tratada como favor ou obrigação legal</span
+        >
+      </li>
+    </ul>
+    <p class="text-lg text-muted-foreground">
+      O foco é <strong class="text-foreground">impacto real</strong>, não volume
+      de conteúdo.
+    </p>
+  </div>
+</section>

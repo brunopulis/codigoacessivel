@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://codigoacessivel.com.br/sitemap-index.xml

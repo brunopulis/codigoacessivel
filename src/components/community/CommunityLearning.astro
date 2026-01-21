@@ -1,0 +1,82 @@
+---
+import { Search, Code, Keyboard, TestTube, Brain, Users } from "@lucide/astro";
+---
+
+<section class="px-6 py-20 lg:py-32">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-2xl md:text-4xl font-bold text-center mb-4">
+      O que você vai aprender
+    </h2><p
+      class="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto"
+    >
+      Ao longo da formação, você vai aprender a:
+    </p><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div
+        class="p-5 rounded-lg bg-card border border-border hover:border-primary/50 transition-colors"
+      >
+        <div
+          class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4"
+        >
+          <Search class="w-6 h-6 text-primary" aria-hidden="true" />
+        </div><p class="text-foreground">
+          Avaliar acessibilidade antes mesmo de rodar testes
+        </p>
+      </div><div
+        class="p-5 rounded-lg bg-card border border-border hover:border-primary/50 transition-colors"
+      >
+        <div
+          class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4"
+        >
+          <Code class="w-6 h-6 text-primary" aria-hidden="true" />
+        </div>
+        <p class="text-foreground">
+          Usar HTML e semântica como tecnologia assistiva
+        </p>
+      </div><div
+        class="p-5 rounded-lg bg-card border border-border hover:border-primary/50 transition-colors"
+      >
+        <div
+          class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4"
+        >
+          <Keyboard class="w-6 h-6 text-primary" aria-hidden="true" />
+        </div>
+        <p class="text-foreground">
+          Corrigir problemas reais de foco, teclado e interação
+        </p>
+      </div><div
+        class="p-5 rounded-lg bg-card border border-border hover:border-primary/50 transition-colors"
+      >
+        <div
+          class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4"
+        >
+          <TestTube class="w-6 h-6 text-primary" aria-hidden="true" />
+        </div>
+        <p class="text-foreground">
+          Entender os limites de testes automatizados
+        </p>
+      </div><div
+        class="p-5 rounded-lg bg-card border border-border hover:border-primary/50 transition-colors"
+      >
+        <div
+          class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4"
+        >
+          <Brain class="w-6 h-6 text-primary" aria-hidden="true" />
+        </div>
+        <p class="text-foreground">
+          Criar um framework pessoal para decisões técnicas em acessibilidade
+        </p>
+      </div><div
+        class="p-5 rounded-lg bg-card border border-border hover:border-primary/50 transition-colors"
+      >
+        <div
+          class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4"
+        >
+          <Users class="w-6 h-6 text-primary" aria-hidden="true" />
+        </div>
+        <p class="text-foreground">
+          Defender acessibilidade no time sem virar o "chato da squad"
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

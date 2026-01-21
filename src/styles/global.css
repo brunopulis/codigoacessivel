@@ -1,7 +1,55 @@
 @import "tailwindcss";
 @config "../../tailwind.config.ts";
 
-/* Design system inspired by brunopulis.com - dark theme with cyan/blue accents */
+@theme {
+  --color-rosewood-50: #fff1f1;
+  --color-rosewood-100: #ffdfdf;
+  --color-rosewood-200: #ffc4c4;
+  --color-rosewood-300: #ff9b9b;
+  --color-rosewood-400: #ff6161;
+  --color-rosewood-500: #ff3030;
+  --color-rosewood-600: #f11111;
+  --color-rosewood-700: #cb0a0a;
+  --color-rosewood-800: #a80c0c;
+  --color-rosewood-900: #8a1212;
+  --color-rosewood-950: #610404;
+
+  --color-aztec-50: #f5f8f7;
+  --color-aztec-100: #e0e7e6;
+  --color-aztec-200: #c0cfcc;
+  --color-aztec-300: #99afad;
+  --color-aztec-400: #738e8b;
+  --color-aztec-500: #597371;
+  --color-aztec-600: #465b59;
+  --color-aztec-700: #3a4b49;
+  --color-aztec-800: #313e3d;
+  --color-aztec-900: #2c3534;
+  --color-aztec-950: #171e1e;
+
+  --color-alto-50: #f7f7f7;
+  --color-alto-100: #ededed;
+  --color-alto-200: #d9d9d9;
+  --color-alto-300: #c8c8c8;
+  --color-alto-400: #adadad;
+  --color-alto-500: #999999;
+  --color-alto-600: #888888;
+  --color-alto-700: #7b7b7b;
+  --color-alto-800: #676767;
+  --color-alto-900: #545454;
+  --color-alto-950: #363636;
+
+  --color-portage-50: #f1f7fc;
+  --color-portage-100: #e5effa;
+  --color-portage-200: #d0e1f5;
+  --color-portage-300: #b4cded;
+  --color-portage-400: #96b1e3;
+  --color-portage-500: #849cdb;
+  --color-portage-600: #6176ca;
+  --color-portage-700: #5162b1;
+  --color-portage-800: #44538f;
+  --color-portage-900: #3c4873;
+  --color-portage-950: #232943;
+}
 
 @layer base {
   :root {
@@ -42,7 +90,7 @@
     --card-foreground: 0 0% 100%;
     --popover: 180 13% 11%;
     --popover-foreground: 0 0% 100%;
-    --primary: 0 92% 20%;
+    --primary: 223, 55%, 69%;
     --primary-foreground: 0 0% 100%;
     --secondary: 224 56% 69%;
     --secondary-foreground: 180 13% 11%;
@@ -80,5 +128,12 @@
     font-feature-settings:
       "rlig" 1,
       "calt" 1;
+
+    :focus,
+    :focus-visible {
+      outline: 2px dashed #fff;
+      outline-color: #fff;
+      outline-offset: 4px;
+    }
   }
 }

@@ -1,20 +1,29 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import CommunityHero from '@components/community/CommunityHero.astro';
-import CommunityProblem from '@components/community/CommunityProblem.astro';
-import CommunityStance from '@components/community/CommunityStance.astro';
-import CommunityForWho from '@components/community/CommunityForWho.astro';
-import CommunitySignUp from '@components/community/CommunitySignUp.tsx';
-import Footer from '@components/landing/Footer.astro';
+import Layout from "@layouts/Layout.astro";
+import { SkipLink } from "accessible-astro-components";
+import Header from "@components/Header.astro";
+import CommunityProblem from "@components/community/CommunityProblem.astro";
+import CommunityStance from "@components/community/CommunityStance.astro";
+import CommunityForWho from "@components/community/CommunityForWho.astro";
+import CommunityLearning from "@components/community/CommunityLearning.astro";
+import CommunityNotFound from "@components/community/CommunityNotFound.astro";
+import CommunitySignUp from "@components/community/CommunitySignUp.tsx";
+import Footer from "@components/Footer.astro";
 ---
 
-<Layout title="codigo-acessivel">
-	<main class="dark min-h-screen bg-background text-foreground">
-		<CommunityHero />
-		<CommunityProblem />
-		<CommunityStance />
-		<CommunityForWho />
-		<CommunitySignUp client:load />
-		<Footer />
-	</main>
+<Layout title="Comunidade Código Acessível">
+  <SkipLink text="Pular para o conteúdo" href="#main-content" />
+  <Header />
+  <main
+    class="dark min-h-screen bg-background text-foreground"
+    id="main-content"
+  >
+    <CommunityProblem />
+    <CommunityStance />
+    <CommunityForWho />
+    <CommunityLearning />
+    <CommunityNotFound />
+    <CommunitySignUp client:load />
+  </main>
+  <Footer />
 </Layout>
